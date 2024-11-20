@@ -9,9 +9,9 @@ export class CitaController{
     ){}
 
     @Post()
-    async create(@Body() body: {pacienteNombre: string; doctorNombre: string; date: string}){
-        const {pacienteNombre, doctorNombre, date} = body;
-        return await this.crearCitaCasoDeUso.execute(pacienteNombre,doctorNombre,new Date(date));
+    async create(@Body() body: {id: number, pacienteId: number; doctorId:  number; date: string}){
+        const {id, pacienteId, doctorId, date} = body;
+        return await this.crearCitaCasoDeUso.execute(id,pacienteId,doctorId,new Date(date));
     }
 
     @Get()

@@ -1,8 +1,8 @@
 export class Cita{
     constructor(
-        public id: string,
-        public pacienteNombre: string,
-        public doctorNombre: string,
+        public id: number,
+        public pacienteID: number,
+        public doctorID: number,
         public date: Date,
     ){}
 }
