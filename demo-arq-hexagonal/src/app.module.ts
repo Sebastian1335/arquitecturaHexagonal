@@ -57,7 +57,7 @@ import { ListarDoctorCasoDeUso } from './application/casos-de-uso/listarDoctor-c
       useFactory: (repo: TypeOrmPacienteRepository) =>
         new CrearPacienteCasoDeUso(repo),
       inject: ['PacienteRepositoryPuerto']
-    },
+    },,
     {
       provide: ListarPacientesCasoDeUso,
       useFactory: (repo: TypeOrmPacienteRepository) =>
